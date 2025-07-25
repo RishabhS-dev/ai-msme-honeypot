@@ -1,0 +1,52 @@
+{
+  "honeypots": [
+    {
+      "id": "ssh-1",
+      "type": "ssh",
+      "image": "cowrie/cowrie:latest",
+      "port": 2222,
+      "service": "SSH",
+      "description": "SSH Honeypot using Cowrie"
+    },
+    {
+      "id": "web-1",
+      "type": "web",
+      "image": "nginx:alpine",
+      "port": 8080,
+      "service": "HTTP",
+      "description": "Fake HTTP Web Server Honeypot"
+    },
+    {
+      "id": "ftp-1",
+      "type": "ftp",
+      "image": "stilliard/pure-ftpd",
+      "port": 2121,
+      "service": "FTP",
+      "description": "FTP Honeypot exposing fake files"
+    },
+    {
+      "id": "smb-1",
+      "type": "smb",
+      "image": "dinotools/dionaea:latest",
+      "port": 445,
+      "service": "SMB",
+      "description": "SMB Honeypot with file share exposure"
+    },
+    {
+      "id": "telnet-1",
+      "type": "telnet",
+      "image": "dtagdevsec/telnetpot",
+      "port": 2323,
+      "service": "Telnet",
+      "description": "Telnet Honeypot simulating weak credentials"
+    },
+    {
+      "id": "mysql-1",
+      "type": "mysql",
+      "image": "dtagdevsec/mysql-honeypot",
+      "port": 3306,
+      "service": "MySQL",
+      "description": "MySQL Honeypot for DB Attack Simulation"
+    }
+  ]
+}
